@@ -1,0 +1,8 @@
+# Защита конфигурации от прямой выдачи веб-сервером
+<FilesMatch "^\.(env|env\.example)$">
+    Require all denied
+</FilesMatch>
+
+# Дополнительно — запретить листинг (если включён на хостинге)
+Options -Indexes
+
